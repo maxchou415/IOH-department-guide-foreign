@@ -2,16 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
 
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
+  var data = [{
+   "name" : "AAU",
+   "departments" : "Computer Science",
+   "state" : 2
+ },
+ {
+   "name" : "NTU",
+   "departments" : "EE",
+   "state" : 1
+ }]
+</script>
+<script>
+var htmlText = "";
+
+ for(var i = 0; i < data.length; i++){
+       var state = data[i].state;
+         if (state == 1){
+          console.log("亞州");
+          htmlText += '<p id="asia">' + data[i].name + "</p>";
+          htmlText += "<p>" + data[i].departments + "</p>";
+         }
+         else if (state == 2){
+          console.log("美洲");
+          htmlText += '<p id="american">' + data[i].name + "</p>";
+          htmlText += "<p>" + data[i].departments + "</p>";
+         }
+         else if (state == 3){
+          console.log("非洲");
+          htmlText += '<p id="africa">' + data[i].name + "</p>";
+          htmlText += "<p>" + data[i].departments + "</p>";
+         }
+         else if (state == 4){
+          console.log("大洋洲");
+          htmlText += '<p id="oceania">' + data[i].name + "</p>";
+          htmlText += "<p>" + data[i].departments + "</p>";
+         }
+       htmlText += "<hr />"
+ }
+
+  $('body').html(htmlText);
 
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
 </body>
 </html>
