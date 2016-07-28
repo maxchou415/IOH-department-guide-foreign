@@ -1,80 +1,176 @@
 [
 	{
-		"name": "MIT",
+		"name": "麻神理工",
 		"url": "https://ioh.tw",
-		"departments": [
-			{ "name": "資工系", "url": "https://ioh.tw" },
-			{ "name": "建築系", "url": "https://ioh.tw" }
+		"term": "MIT",
+		"colleges": [
+			{
+				"name": "電資學院",
+				"departments": [
+				  { "name": "資工系", "url": "https://ioh.tw" },
+				  { "name": "電機系", "url": "https://ioh.tw" }
+			  ]
+			},
+			{
+				"name": "設計學院",
+				"departments": [
+					{ "name": "建築系", "url": "https://ioh.tw" }
+				]
+			}
 		],
 		"state": 0,
 		"country": "美國"
 	},
 	{
-		"name": "MIT",
+		"name": "加拿大學",
 		"url": "https://ioh.tw",
-		"departments": [
-			{ "name": "資工系", "url": "https://ioh.tw" },
-			{ "name": "建築系", "url": "https://ioh.tw" }
+		"term": "JNU",
+		"colleges": [
+			{
+				"name": "電資學院",
+				"departments": [
+				  { "name": "資工系", "url": "https://ioh.tw" },
+				  { "name": "電機系", "url": "https://ioh.tw" }
+			  ]
+			},
+			{
+				"name": "設計學院",
+				"departments": [
+					{ "name": "建築系", "url": "https://ioh.tw" }
+				]
+			}
 		],
 		"state": 0,
 		"country": "加拿大"
 	},
 	{
-		"name": "MIT",
-		"url": "https://ioh.tw",
-		"departments": [
-			{ "name": "資工系", "url": "https://ioh.tw" },
-			{ "name": "建築系", "url": "https://ioh.tw" }
-		],
-		"state": 0,
-		"country": "美國"
-	},
-	{
-		"name": "MIT",
-		"url": "https://ioh.tw",
-		"departments": [
-			{ "name": "資工系", "url": "https://ioh.tw" },
-			{ "name": "建築系", "url": "https://ioh.tw" }
-		],
-		"state": 0,
-		"country": "美國"
-	},
-	{
-		"name": "MIT",
-		"url": "https://ioh.tw",
-		"departments": [
-			{ "name": "資工系", "url": "https://ioh.tw" },
-			{ "name": "建築系", "url": "https://ioh.tw" }
-		],
-		"state": 0,
-		"country": "美國"
-	},
-	{
-		"name": "MIT",
-		"url": "https://ioh.tw",
-		"departments": [
-			{ "name": "資工系", "url": "https://ioh.tw" },
-			{ "name": "建築系", "url": "https://ioh.tw" }
-		],
-		"state": 0,
-		"country": "美國"
-	},
-	{
 		"name": "台灣大學",
 		"url": "https://ioh.tw",
-		"departments": [
-			{ "name": "資工系", "url": "https://ioh.tw" },
-			{ "name": "建築系", "url": "https://ioh.tw" }
+		"term": "NTU",
+		"colleges": [
+			{
+				"name": "電資學院",
+				"departments": [
+				  { "name": "資工系", "url": "https://ioh.tw" },
+				  { "name": "電機系", "url": "https://ioh.tw" }
+			  ]
+			},
+			{
+				"name": "設計學院",
+				"departments": [
+					{ "name": "建築系", "url": "https://ioh.tw" }
+				]
+			}
 		],
 		"state": 1,
 		"country": "台灣"
 	},
 	{
-		"name": "MIT",
+		"name": "美國大學",
 		"url": "https://ioh.tw",
-		"departments": [
-			{ "name": "資工系", "url": "https://ioh.tw" },
-			{ "name": "建築系", "url": "https://ioh.tw" }
+		"term": "MGU",
+		"colleges": [
+			{
+				"name": "電資學院",
+				"departments": [
+				  { "name": "資工系", "url": "https://ioh.tw" },
+				  { "name": "電機系", "url": "https://ioh.tw" }
+			  ]
+			},
+			{
+				"name": "設計學院",
+				"departments": [
+					{ "name": "建築系", "url": "https://ioh.tw" }
+				]
+			}
+		],
+		"state": 0,
+		"country": "美國"
+	},
+	{
+		"name": "台二大學",
+		"url": "https://ioh.tw",
+		"term": "TRU",
+		"colleges": [
+			{
+				"name": "電資學院",
+				"departments": [
+				  { "name": "資工系", "url": "https://ioh.tw" },
+				  { "name": "電機系", "url": "https://ioh.tw" }
+			  ]
+			},
+			{
+				"name": "設計學院",
+				"departments": [
+					{ "name": "建築系", "url": "https://ioh.tw" }
+				]
+			}
+		],
+		"state": 1,
+		"country": "台灣"
+	},
+	{
+		"name": "每三大學",
+		"url": "https://ioh.tw",
+		"term": "MSU",
+		"colleges": [
+			{
+				"name": "電資學院",
+				"departments": [
+				  { "name": "資工系", "url": "https://ioh.tw" },
+				  { "name": "電機系", "url": "https://ioh.tw" }
+			  ]
+			},
+			{
+				"name": "設計學院",
+				"departments": [
+					{ "name": "建築系", "url": "https://ioh.tw" }
+				]
+			}
+		],
+		"state": 0,
+		"country": "美國"
+	},
+	{
+		"name": "加二大學",
+		"url": "https://ioh.tw",
+		"term": "JRU",
+		"colleges": [
+			{
+				"name": "電資學院",
+				"departments": [
+				  { "name": "資工系", "url": "https://ioh.tw" },
+				  { "name": "電機系", "url": "https://ioh.tw" }
+			  ]
+			},
+			{
+				"name": "設計學院",
+				"departments": [
+					{ "name": "建築系", "url": "https://ioh.tw" }
+				]
+			}
+		],
+		"state": 0,
+		"country": "加拿大"
+	},
+	{
+		"name": "隨便大學",
+		"url": "https://ioh.tw",
+		"term": "SBU",
+		"colleges": [
+			{
+				"name": "電資學院",
+				"departments": [
+				  { "name": "資工系", "url": "https://ioh.tw" },
+				  { "name": "電機系", "url": "https://ioh.tw" }
+			  ]
+			},
+			{
+				"name": "設計學院",
+				"departments": [
+					{ "name": "建築系", "url": "https://ioh.tw" }
+				]
+			}
 		],
 		"state": 0,
 		"country": "美國"

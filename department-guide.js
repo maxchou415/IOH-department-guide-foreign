@@ -27,6 +27,21 @@ $(function(){
 
     //render text
     $('#guide').html(htmlText);
+    
+    //implement click event
+    $(document).ready(function() {
+      var x;
+      $("input").click(function() {
+        if ($(this).attr("id") == x) {
+          this.checked = false;
+          x = 0;
+        } else {
+          x = $(this).attr("id");
+        }
+        $(".school-label label").removeClass("focus-label");
+        $(".school-label label[for='" + $("input:checked").attr("id") + "']").addClass("focus-label");
+      });
+    });
   }
 
   /**
@@ -97,17 +112,113 @@ $(function(){
         count       = 0,
 
         //determine when to output new state
-        lastState   = "last",
+        lastState   = -1,
 
         //determine when to output new country
-        lastCountry = "last";
+        lastCountry = "last",
+
+        //data cache(five record each time)
+        cache       = [];
 
     for(var i = 0; i < data.length; i++)
     {
-      
+      //add explore div
+      if(data[i].country != lastCountry)
+        htmlText += "<div class='explore'>";
+
+      //title if state change
+      if(data[i].state != lastState)
+      {
+        htmlText += "<span class='explore-title'>";
+        htmlText += state[data[i].state];
+        htmlText += "</span>";
+
+        lastState = data[i].state;
+      }
+
+      //add sub-title if country change
+      if(data[i].country != lastCountry)
+      {
+        htmlText += "<h4>" + data[i].country + "</h4>";
+
+        lastCountry = data[i].country;
+      }
+
+      //add content if
+      //1. change sub-title
+      //2. cache.length == 5
+      count ++;
+      cache.push(data[i]);
+
+      if(count == 5 || i == data.length -1 || data[i + 1].country != data[i].country)
+      {
+        //output
+        htmlText += createContent(cache);
+        
+        //reset cache and count
+        count = 0;
+        cache = [];
+      }
+
+      //close tag for explore div
+      if(i == data.length - 1 || data[i].country != data[i + 1].country)
+        htmlText += "</div>";
     }
 
     return htmlText;
   }
 
+  /**
+   * create content for explore div
+   * @param  { array } data - one row of data(max to five)
+   * @return { string } htmlText
+   */
+  function createContent(data)
+  {
+    var htmlText = "";
+    
+    //school labels
+    htmlText += "<div class='school-label'>";
+    for(var i = 0; i < data.length; i++)
+    {
+      htmlText += "<label for='" + data[i].term + "' style='cursor:pointer;'>";
+      htmlText += data[i].name;
+      htmlText += "</label>";
+    }
+    htmlText += "</div>";
+
+    //contents
+    for(var i = 0; i < data.length; i++)
+    {
+      htmlText += "<input class='invisible toggle' id='";
+      htmlText += data[i].term;
+      htmlText += "' name='schools' type='radio'>";
+
+      htmlText += "<div class='toggle-content'>";
+      htmlText +=   "<label class='close-content' for='";
+      htmlText +=   data[i].term;
+      htmlText +=   "'>x</label>";
+      htmlText +=   "<a href='" + data[i].url + "'>全部科系列表</a>";
+
+      for(var k = 0; k < data[i].colleges.length; k++)
+      {
+        var college = data[i].colleges[k];
+        htmlText += "<div>" + college.name + "</div>";
+
+        for(var j = 0; j < college.departments.length; j++)
+        {
+          var department = college.departments[j];
+          htmlText += "<a href='" + department.url + "'>";
+          htmlText += department.name;
+          htmlText += "</a>";
+        }
+
+        htmlText += "<br><br>";
+      }
+
+      htmlText += "</div>";
+    }
+
+    return htmlText;
+  }
 });
