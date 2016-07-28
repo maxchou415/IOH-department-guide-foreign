@@ -9,7 +9,7 @@ $(function(){
   $.getJSON('data.json', function(response){
 
     //render html to #guide
-  	renderGuide(response);
+    renderGuide(response);
   });
 
   /**
@@ -18,15 +18,15 @@ $(function(){
    */
   function renderGuide(data)
   {
-  	//order data with data[i].state, data[i].country
-  	data = orderData(data);
+    //order data with data[i].state, data[i].country
+    data = orderData(data);
 
-  	//generate html text
-  	//yet implemented
-  	var htmlText = generateHtml(data);
+    //generate html text
+    //yet implemented
+    var htmlText = generateHtml(data);
 
-  	//render text
-  	$('#guide').html(htmlText);
+    //render text
+    $('#guide').html(htmlText);
   }
 
   /**
@@ -36,7 +36,7 @@ $(function(){
    */
   function orderData(data)
   {
-  	//sort by state
+    //sort by state
     data = data.sort(function(a, b){
       return a.state - b.state;
     });
@@ -45,41 +45,41 @@ $(function(){
     var filtered = [],
 
         //arrays of same state
-    		part     = [],
+        part     = [],
 
-    		//determine when state changes
-    		last     = 0;
+        //determine when state changes
+        last     = 0;
 
     //break same state into arrays
     part.push(data[0]);
     for(var i = 1; i < data.length; i++)
     {
-    	if(data[i].state != last)
-    	{
-    		filtered.push(part);
-    		part = [];
-    		last = data[i].state;
-    	}
+      if(data[i].state != last)
+      {
+        filtered.push(part);
+        part = [];
+        last = data[i].state;
+      }
 
-    	part.push(data[i]);
+      part.push(data[i]);
 
-    	if(i == data.length - 1)
-    		filtered.push(part);
+      if(i == data.length - 1)
+        filtered.push(part);
     }
 
     //sort each array by country
     for(var i = 0; i < filtered.length; i++)
     {
-    	filtered[i] = filtered[i].sort(function(a, b){
-    		return a.country.localeCompare(b.country);
-    	});
+      filtered[i] = filtered[i].sort(function(a, b){
+        return a.country.localeCompare(b.country);
+      });
     }
 
     //merge the arrays
     data = [];
     for(var i = 0; i < filtered.length; i++)
-    	for(var k = 0; k < filtered[i].length; k++)
-    		data.push(filtered[i][k]);
+      for(var k = 0; k < filtered[i].length; k++)
+        data.push(filtered[i][k]);
 
     return data;
   }
@@ -91,23 +91,23 @@ $(function(){
    */
   function generateHtml(data)
   {
-  	var htmlText    = "",
+    var htmlText    = "",
 
-  	    //count to determine when to break a new line
-  			count       = 0,
+        //count to determine when to break a new line
+        count       = 0,
 
-  			//determine when to output new state
-  			lastState   = "last",
+        //determine when to output new state
+        lastState   = "last",
 
-  			//determine when to output new country
-  			lastCountry = "last";
+        //determine when to output new country
+        lastCountry = "last";
 
-  	for(var i = 0; i < data.length; i++)
-  	{
-  		
-  	}
+    for(var i = 0; i < data.length; i++)
+    {
+      
+    }
 
-  	return htmlText;
+    return htmlText;
   }
 
 });
