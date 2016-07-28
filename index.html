@@ -5,6 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
+<p id="asia">
+  <p id="asia-dep"></p>
+</p>
+<p id="american">
+  <p id="american-dep"></p>
+</p>
+<p id="africa">
+  <p id="africa-dep"></p>
+</p>
+<p id="oceania">
+  <p id="oceania-dep"></p>
+</p>
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -18,6 +31,11 @@
    "name" : "NTU",
    "departments" : "EE",
    "state" : 1
+ },
+ {
+   "name" : "NTNU",
+   "departments" : "EE",
+   "state" : 3
  }]
 </script>
 <script>
@@ -27,28 +45,27 @@ var htmlText = "";
        var state = data[i].state;
          if (state == 1){
           console.log("亞州");
-          htmlText += '<p id="asia">' + data[i].name + "</p>";
-          htmlText += "<p>" + data[i].departments + "</p>";
+          $('#asia').html(data[i].name);
+          $('#asia-dep').html(data[i].departments);
          }
          else if (state == 2){
           console.log("美洲");
-          htmlText += '<p id="american">' + data[i].name + "</p>";
-          htmlText += "<p>" + data[i].departments + "</p>";
+          $('#american').html(data[i].name);
+          $('#american-dep').html(data[i].departments);
          }
          else if (state == 3){
           console.log("非洲");
-          htmlText += '<p id="africa">' + data[i].name + "</p>";
-          htmlText += "<p>" + data[i].departments + "</p>";
+          $('#africa').html(data[i].name);
+          $('#africa-dep').html(data[i].departments);
          }
          else if (state == 4){
           console.log("大洋洲");
-          htmlText += '<p id="oceania">' + data[i].name + "</p>";
-          htmlText += "<p>" + data[i].departments + "</p>";
+          $('#ocenia').html(data[i].name);
+          $('#ocenia-dep').html(data[i].departments);
          }
-       htmlText += "<hr />"
  }
 
-  $('body').html(htmlText);
+  $('body').append(htmlText);
 
 </script>
 
