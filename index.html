@@ -7,15 +7,19 @@
 <body>
 <p id="asia">
   <p id="asia-dep"></p>
+  <p id="asia-dep-link"></p>
 </p>
 <p id="american">
   <p id="american-dep"></p>
+  <p id="american-dep-link"></p>
 </p>
 <p id="africa">
   <p id="africa-dep"></p>
+  <p id="africa-dep-link"></p>
 </p>
 <p id="oceania">
   <p id="oceania-dep"></p>
+  <p id="oceania-dep-link"></p>
 </p>
 
 
@@ -24,17 +28,26 @@
 <script>
   var data = [{
    "name" : "AAU",
-   "departments" : "Computer Science",
+   "departments" : [{
+       "url" : "https://google.com",
+       "name" : "Computer Science"
+     }],
    "state" : 2
  },
  {
    "name" : "NTU",
-   "departments" : "EE",
+   "departments" : [{
+       "url" : "https://google.com",
+       "name" : "EE"
+     }],
    "state" : 1
  },
  {
    "name" : "NTNU",
-   "departments" : "EE",
+   "departments" : [{
+       "url" : "https://google.com",
+       "name" : "How to play a silly and cute student?"
+     }],
    "state" : 3
  }]
 </script>
@@ -46,22 +59,26 @@ var htmlText = "";
          if (state == 1){
           console.log("亞州");
           $('#asia').html(data[i].name);
-          $('#asia-dep').html(data[i].departments);
+          $('#asia-dep').html(data[i].departments[0].name);
+          $('#asia-dep-link').html('<a href=' + '"' + data[i].departments[0].url + '"' + '>' + data[i].departments[0].name +'</a>');
          }
          else if (state == 2){
           console.log("美洲");
           $('#american').html(data[i].name);
-          $('#american-dep').html(data[i].departments);
+          $('#american-dep').html(data[i].departments[0].name);
+          $('#american-dep-link').html('<a href=' + '"' + data[i].departments[0].url + '"' + '>' + data[i].departments[0].name +'</a>');
          }
          else if (state == 3){
           console.log("非洲");
           $('#africa').html(data[i].name);
-          $('#africa-dep').html(data[i].departments);
+          $('#africa-dep').html(data[i].departments[0].name);
+          $('#africa-dep-link').html('<a href=' + '"' + data[i].departments[0].url + '"' + '>' + data[i].departments[0].name +'</a>');
          }
          else if (state == 4){
           console.log("大洋洲");
           $('#ocenia').html(data[i].name);
-          $('#ocenia-dep').html(data[i].departments);
+          $('#ocenia-dep').html(data[i].departments[0].name);
+          $('#ocenia-dep-link').html('<a href=' + '"' + data[i].departments[0].url + '"' + '>' + data[i].departments[0].name +'</a>');
          }
  }
 
