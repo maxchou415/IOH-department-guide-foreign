@@ -1,0 +1,82 @@
+[
+	{
+		"name": "MIT",
+		"url": "https://ioh.tw",
+		"departments": [
+			{ "name": "資工系", "url": "https://ioh.tw" },
+			{ "name": "建築系", "url": "https://ioh.tw" }
+		],
+		"state": 0,
+		"country": "美國"
+	},
+	{
+		"name": "MIT",
+		"url": "https://ioh.tw",
+		"departments": [
+			{ "name": "資工系", "url": "https://ioh.tw" },
+			{ "name": "建築系", "url": "https://ioh.tw" }
+		],
+		"state": 0,
+		"country": "加拿大"
+	},
+	{
+		"name": "MIT",
+		"url": "https://ioh.tw",
+		"departments": [
+			{ "name": "資工系", "url": "https://ioh.tw" },
+			{ "name": "建築系", "url": "https://ioh.tw" }
+		],
+		"state": 0,
+		"country": "美國"
+	},
+	{
+		"name": "MIT",
+		"url": "https://ioh.tw",
+		"departments": [
+			{ "name": "資工系", "url": "https://ioh.tw" },
+			{ "name": "建築系", "url": "https://ioh.tw" }
+		],
+		"state": 0,
+		"country": "美國"
+	},
+	{
+		"name": "MIT",
+		"url": "https://ioh.tw",
+		"departments": [
+			{ "name": "資工系", "url": "https://ioh.tw" },
+			{ "name": "建築系", "url": "https://ioh.tw" }
+		],
+		"state": 0,
+		"country": "美國"
+	},
+	{
+		"name": "MIT",
+		"url": "https://ioh.tw",
+		"departments": [
+			{ "name": "資工系", "url": "https://ioh.tw" },
+			{ "name": "建築系", "url": "https://ioh.tw" }
+		],
+		"state": 0,
+		"country": "美國"
+	},
+	{
+		"name": "台灣大學",
+		"url": "https://ioh.tw",
+		"departments": [
+			{ "name": "資工系", "url": "https://ioh.tw" },
+			{ "name": "建築系", "url": "https://ioh.tw" }
+		],
+		"state": 1,
+		"country": "台灣"
+	},
+	{
+		"name": "MIT",
+		"url": "https://ioh.tw",
+		"departments": [
+			{ "name": "資工系", "url": "https://ioh.tw" },
+			{ "name": "建築系", "url": "https://ioh.tw" }
+		],
+		"state": 0,
+		"country": "美國"
+	}
+]
