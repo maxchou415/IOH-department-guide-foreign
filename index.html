@@ -3,36 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-<p id="asia">
-  <p id="asia-dep"></p>
-  <p id="asia-dep-link"></p>
-</p>
-<p id="american">
-  <p id="american-dep"></p>
-  <p id="american-dep-link"></p>
-</p>
-<p id="africa">
-  <p id="africa-dep"></p>
-  <p id="africa-dep-link"></p>
-</p>
-<p id="oceania">
-  <p id="oceania-dep"></p>
-  <p id="oceania-dep-link"></p>
-</p>
-
-
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">亞洲</h3>
+        </div>
+        <div class="panel-body">
+          <div id="asia-dep-link">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">美洲</h3>
+        </div>
+        <div class="panel-body">
+          <div id="american-dep-link"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">非洲</h3>
+        </div>
+        <div class="panel-body">
+          <div id="africa-dep-link"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title">大洋洲</h3>
+        </div>
+        <div class="panel-body">
+          <div id="ocenia-dep-link"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
   var data = [{
    "name" : "AAU",
-   "departments" : [{
-       "url" : "https://google.com",
-       "name" : "Computer Science"
+   "colleges" : [{
+       "name" : "Computer Science",
+         "departments" : [{
+           "name" : "how to let a computer crash?",
+           "url" : "http://google.com"
+         }],
      }],
-   "state" : 2
+   "state" : 1
  },
  {
    "name" : "NTU",
@@ -40,7 +72,15 @@
        "url" : "https://google.com",
        "name" : "EE"
      }],
-   "state" : 1
+   "state" : 2
+ },
+ {
+   "name" : "NTUUUUUUUUUUUUU",
+   "departments" : [{
+       "url" : "https://google.com",
+       "name" : "EEEEEEEEEEEE"
+     }],
+   "state" : 2
  },
  {
    "name" : "NTNU",
@@ -49,6 +89,14 @@
        "name" : "How to play a silly and cute student?"
      }],
    "state" : 3
+ },
+ {
+   "name" : "EEÉnammmmmme",
+   "departments" : [{
+       "url" : "https://google.com",
+       "name" : "EÊÊËĖ"
+     }],
+   "state" : 4
  }]
 </script>
 <script>
@@ -58,31 +106,26 @@ var htmlText = "";
        var state = data[i].state;
          if (state == 1){
           console.log("亞州");
-          $('#asia').html(data[i].name);
-          $('#asia-dep').html(data[i].departments[0].name);
-          $('#asia-dep-link').html('<a href=' + '"' + data[i].departments[0].url + '"' + '>' + data[i].departments[0].name +'</a>');
-         }
+          htmlText += '<div class="well">';
+          htmlText += data[i].name;
+          htmlText += '<br />';
+          htmlText += data[i].colleges[0].name;
+          htmlText += '</div>';
+          $('#asia-dep-link').append(htmlText);
+        }
          else if (state == 2){
           console.log("美洲");
-          $('#american').html(data[i].name);
-          $('#american-dep').html(data[i].departments[0].name);
-          $('#american-dep-link').html('<a href=' + '"' + data[i].departments[0].url + '"' + '>' + data[i].departments[0].name +'</a>');
+          $('#american-dep-link').append('<div class="well">' + data[i].name + "<br />" + data[i].departments[0].name + "</div>");
          }
          else if (state == 3){
           console.log("非洲");
-          $('#africa').html(data[i].name);
-          $('#africa-dep').html(data[i].departments[0].name);
-          $('#africa-dep-link').html('<a href=' + '"' + data[i].departments[0].url + '"' + '>' + data[i].departments[0].name +'</a>');
+          $('#africa-dep-link').append('<div class="well">' + data[i].name + "<br />" + data[i].departments[0].name + "</div>");
          }
          else if (state == 4){
           console.log("大洋洲");
-          $('#ocenia').html(data[i].name);
-          $('#ocenia-dep').html(data[i].departments[0].name);
-          $('#ocenia-dep-link').html('<a href=' + '"' + data[i].departments[0].url + '"' + '>' + data[i].departments[0].name +'</a>');
+          $('#ocenia-dep-link').append('<div class="well">' + data[i].name + "<br />" + data[i].departments[0].name + "</div>");
          }
  }
-
-  $('body').append(htmlText);
 
 </script>
 
