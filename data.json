@@ -1,0 +1,135 @@
+{
+    "name": "北京中醫藥大學",
+    "url": "https://ioh.tw/school/%E5%8C%97%E4%BA%AC%E4%B8%AD%E9%86%AB%E8%97%A5%E5%A4%A7%E5%AD%B8/",
+    "term": "BUSM",
+    "colleges": [
+      {
+        "name": "中醫學院",
+        "departments": [
+          {
+            "name": "中醫",
+            "url": "https://ioh.tw/?qmt%5Bschool%5D%5B%5D=324&qmt%5Btopic%5D%5B%5D=325"
+          }
+        ]
+      }
+    ],
+    "state": 2,
+    "country": "中國"
+  },
+  {
+    "name": "日本明治學院大學",
+    "url": "https://ioh.tw/school/%E6%97%A5%E6%9C%AC%E6%98%8E%E6%B2%BB%E5%AD%B8%E9%99%A2%E5%A4%A7%E5%AD%B8/",
+    "term": "MEIJIGAKUIN",
+    "colleges": [
+      {
+        "name": "X",
+        "departments": [
+          {
+            "name": "交換",
+            "url": "https://ioh.tw/?qmt%5Bschool%5D%5B%5D=296&qmt%5Btopic%5D%5B%5D=206"
+          }
+        ]
+      }
+    ],
+    "state": 2,
+    "country": "日本"
+  },
+  {
+    "name": "澳門大學",
+    "url": "https://ioh.tw/school/%E6%BE%B3%E9%96%80%E5%A4%A7%E5%AD%B8/",
+    "term": "UMAC",
+    "colleges": [
+      {
+        "name": "社會科學學院",
+        "departments": [
+          {
+            "name": "傳播學",
+            "url": "https://ioh.tw/?qmt%5Bschool%5D%5B%5D=291&qmt%5Btopic%5D%5B%5D=287"
+          }
+        ]
+      }
+    ],
+    "state": 2,
+    "country": "中國"
+  },
+  {
+    "name": "香港中文大學",
+    "url": "https://ioh.tw/school/%E9%A6%99%E6%B8%AF%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8/",
+    "term": "CUHK",
+    "colleges": [
+      {
+        "name": "商學院",
+        "departments": [
+          {
+            "name": "財務",
+            "url": "https://ioh.tw/?qmt%5Bschool%5D%5B%5D=307&qmt%5Btopic%5D%5B%5D=18"
+          }
+        ]
+      }
+    ],
+    "state": 2,
+    "country": "香港"
+  },
+  {
+    "name": "香港城市大學",
+    "url": "https://ioh.tw/school/%E9%A6%99%E6%B8%AF%E5%9F%8E%E5%B8%82%E5%A4%A7%E5%AD%B8/",
+    "term": "CITYU",
+    "colleges": [
+      {
+        "name": "商學院",
+        "departments": [
+          {
+            "name": "財務",
+            "url": "https://ioh.tw/?qmt%5Bschool%5D%5B%5D=290&qmt%5Btopic%5D%5B%5D=128"
+          }
+        ]
+      }
+    ],
+    "state": 2,
+    "country": "香港"
+  },
+  {
+    "name": "香港大學",
+    "url": "http://ioh.tw/school/%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8/",
+    "term": "HKU",
+    "colleges": [
+      {
+        "name": "理學院",
+        "departments": [
+          {
+            "name": "材料科學與工程學",
+            "url": "https://ioh.tw/?qmt%5Bschool%5D%5B%5D=290&qmt%5Btopic%5D%5B%5D=128"
+          }
+        ]
+      },
+      {
+        "name": "社會科學學院",
+        "departments": [
+          {
+            "name": "政治學",
+            "url": "https://ioh.tw/?qmt%5Bschool%5D%5B%5D=290"
+          }
+        ]
+      }
+    ],
+    "state": 2,
+    "country": "香港"
+  },
+  {
+    "name": "澳洲新堡大學",
+    "url": "https://ioh.tw/school/the-university-of-newcastle/",
+    "term": "UON",
+    "colleges": [
+      {
+        "name": "設計傳播與資訊科技學院",
+        "departments": [
+          {
+            "name": "數位媒體",
+            "url": "https://ioh.tw/?qmt%5Bschool%5D%5B%5D=317&qmt%5Btopic%5D%5B%5D=318"
+          }
+        ]
+      }
+    ],
+    "state": 3,
+    "country": "澳洲"
+  }
