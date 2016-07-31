@@ -1,13 +1,15 @@
 $(function(){
-  
+
   var state = [
     "美洲",
-    "亞洲"
+    "歐洲",
+    "亞洲",
+    "大洋洲",
   ];
 
   //get data
   $.getJSON('data.json', function(response){
-
+  	console.log(response);
     //render html to #guide
     renderGuide(response);
   });
@@ -22,7 +24,6 @@ $(function(){
     data = orderData(data);
 
     //generate html text
-    //yet implemented
     var htmlText = generateHtml(data);
 
     //render text
